@@ -1,6 +1,6 @@
 {
   "name": "dnse",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Dagens nyheter i terminalen",
   "main": "dist/index.js",
   "bin": {
@@ -13,7 +13,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prebuild": "rimraf dist",
-    "build": "babel --out-dir dist src"
+    "build": "babel --out-dir dist src",
+    "prepublish": "npm run build"
   },
   "keywords": [
     "dn",
@@ -25,6 +26,7 @@
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "6.10.1",
+    "babel-preset-es2015": "6.9.0",
     "rimraf": "2.5.2"
   },
   "eslintConfig": {
@@ -34,6 +36,11 @@
     "parserOptions": {
       "ecmaVersion": 6
     }
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
   },
   "dependencies": {
     "x-ray": "2.3.0"

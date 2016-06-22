@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const dn = require('../index.js')
 
 dn.latest()
