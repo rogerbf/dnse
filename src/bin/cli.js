@@ -1,3 +1,5 @@
 const dn = require('../index.js')
 
-console.log("Dagens Nyheter")
+dn.latest()
+  .then(news => console.log(JSON.stringify(news, null, 2)))
+  .catch(e => console.log(e))
