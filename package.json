@@ -1,0 +1,49 @@
+{
+  "name": "dnse",
+  "version": "1.0.0",
+  "description": "Dagens nyheter i terminalen",
+  "main": "dist/index.js",
+  "bin": {
+    "dn": "./dist/bin/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "rimraf dist",
+    "build": "babel --out-dir dist src"
+  },
+  "keywords": [
+    "dn",
+    "nyheter",
+    "news",
+    "cli"
+  ],
+  "author": "rogerbf <roger@bergfalk.nu> (http://bergfalk.nu/)",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "6.10.1",
+    "rimraf": "2.5.2"
+  },
+  "eslintConfig": {
+    "env": {
+      "node": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 6
+    }
+  },
+  "dependencies": {
+    "x-ray": "2.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rogerbf/dnse.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rogerbf/dnse/issues"
+  },
+  "homepage": "https://github.com/rogerbf/dnse#readme"
+}
