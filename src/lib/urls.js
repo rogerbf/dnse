@@ -1,7 +1,7 @@
 const nyheter = 'http://www.dn.se'
 const ekonomi = 'http://www.dn.se/ekonomi/'
 const kultur = 'http://www.dn.se/kultur-noje/'
-const sthlm = stockholm = 'http://www.dn.se/sthlm/'
+const sthlm = 'http://www.dn.se/sthlm/'
 const sport = 'http://www.dn.se/sport/'
 
 module.exports = {
@@ -9,6 +9,6 @@ module.exports = {
   ekonomi,
   kultur,
   sthlm,
-  stockholm,
+  stockholm: sthlm,
   sport
 }
