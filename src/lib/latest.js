@@ -1,3 +1,5 @@
+const urls = require('./urls')
+
 const Scraper = require('x-ray')
 const scrape = Scraper({
   filters: {
@@ -6,8 +8,6 @@ const scrape = Scraper({
     }
   }
 })
-
-const url = 'http://www.dn.se'
 
 /*
 Senaste nytt struktur:
@@ -18,7 +18,7 @@ Senaste nytt struktur:
   .article-teaser__summary-text
 */
 
-scrape(url, '.article-teaser-list--stretchable .flex-item li', [{
+scrape(urls.nyheter, '.article-teaser-list--stretchable .flex-item li', [{
   datetime: '.article-teaser__datetime@datetime',
   title: '.article-teaser__title-text',
   summary: '.article-teaser__summary-text | trim',
