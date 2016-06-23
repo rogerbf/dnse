@@ -1,6 +1,6 @@
 {
   "name": "dnse",
-  "version": "0.2.1",
+  "version": "0.2.0",
   "description": "Dagens nyheter i terminalen",
   "main": "dist/index.js",
   "bin": {
@@ -18,6 +18,7 @@
   },
   "keywords": [
     "dn",
+    "dagens",
     "nyheter",
     "news",
     "cli"
