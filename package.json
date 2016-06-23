@@ -1,6 +1,6 @@
 {
   "name": "dnse",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Dagens nyheter i terminalen",
   "main": "dist/index.js",
   "bin": {
