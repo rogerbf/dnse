@@ -1,6 +1,5 @@
 const urls = require('./urls.js')
-const CreateScraper = require('x-ray')
-const scraper = CreateScraper({
+const scraper = require('x-ray')({
   filters: {
     trim: function (value) {
       return typeof value === 'string' ? value.trim() : value
@@ -8,20 +7,44 @@ const scraper = CreateScraper({
   }
 })
 
-const scrape = scraper(urls.nyheter, '.js-start-page .grid > .grid__item .section__content > a', [{
+const selectors = {
+  latest: '.article-teaser-list--stretchable .flex-item li',
+  headlines: '.js-start-page .grid > .grid__item .section__content > a'
+}
+
+const scrapeLatest = scraper(urls.nyheter, selectors.latest, [{
+  datetime: '.article-teaser__datetime@datetime',
+  title: '.article-teaser__title-text',
+  summary: '.article-teaser__summary-text | trim',
+  url: 'a@href'
+}])
+
+const scrapeHeadlines = scraper(urls.nyheter, selectors.headlines, [{
   datetime: 'time@datetime',
   title: '.article-teaser__title-text',
   summary: '.article-teaser__summary-text | trim',
   url: '@href'
 }])
 
-function news () {
+const latest = () => {
   return new Promise((resolve, reject) => {
-    scrape((err, news) => {
+    scrapeLatest((err, latest) => {
       if (err) reject(err)
-      resolve(news)
+      resolve(latest)
     })
   })
 }
 
-module.exports = news
+const headlines = () => {
+  return new Promise((resolve, reject) => {
+    scrapeHeadlines((err, headlines) => {
+      if (err) reject(err)
+      resolve(headlines)
+    })
+  })
+}
+
+module.exports = {
+  latest,
+  headlines
+}
