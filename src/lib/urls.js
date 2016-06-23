@@ -9,6 +9,5 @@ module.exports = {
   ekonomi,
   kultur,
   sthlm,
-  stockholm: sthlm,
   sport
 }
