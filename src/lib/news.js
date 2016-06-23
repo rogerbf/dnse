@@ -8,8 +8,8 @@ const scraper = require('x-ray')({
 })
 
 const selectors = {
-  latest: '.article-teaser-list--stretchable .flex-item li',
-  headlines: '.js-start-page .grid > .grid__item .section__content > a'
+  latest: '.article-teaser-list--timeline .widget__list-item--flex',
+  headlines: '.grid .section__content > a'
 }
 
 const scrapeLatest = scraper(urls.nyheter, selectors.latest, [{
