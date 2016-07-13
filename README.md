@@ -17,21 +17,17 @@ The `dn` command is now available in your command line.
 ### Node.js
 
 ``` javascript
-
 const dn = require('dnse')
 
 dn.news.latest()
   .then(news => console.log(news))
   .catch(e => console.error(e))
-
 ```
 
 ### CLI
 
 ```
-
 dn [section] [latest || headlines]
-
 ```
 
 `[section]` can be: `news`, `economy`, `culture`, `sthlm`, `sports`.
