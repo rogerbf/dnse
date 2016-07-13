@@ -1,6 +1,6 @@
 {
   "name": "dnse",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Dagens Nyheter",
   "main": "./dist/index.js",
   "bin": {
