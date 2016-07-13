@@ -51,7 +51,7 @@ Returns the most recently published headlines.
 
 `dn.[section].headlines()`
 
-Returns the headlines of the `[section]`.
+Returns the headlines in the `[section]`.
 
 `[section]` can be any of the following:
 
