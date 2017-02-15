@@ -8,7 +8,7 @@ const scraper = require('x-ray')({
 })
 
 const selectors = {
-  latest: '.article-teaser-list--timeline .widget__list-item--flex',
+  latest: '.article-teaser-list--timeline .widget__content li',
   headlines: '.grid .section__content > a'
 }
 
